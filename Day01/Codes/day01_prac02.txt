@@ -1,0 +1,33 @@
+@echo off  
+:: Disable command echoing
+
+echo Username: %username%
+:: Display the current logged-in user's username
+
+echo Windows version: 
+ver
+:: Display the current Windows version
+
+color B
+:: Change the command prompt text color to light aqua blue
+
+time
+:: Display or set the current system time
+
+date
+:: Display or set the current system date
+
+echo Current date: %DATE%
+:: Display the current date
+
+echo Current time: %TIME%
+:: Display the current time
+
+dir/w
+::List files and directories in the current folder
+
+dir/?
+:: Display help information for the 'dir' command
+
+pause
+:: Keep the window open

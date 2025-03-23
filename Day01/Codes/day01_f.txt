@@ -1,0 +1,77 @@
+// Create a file 'stu.txt'
+touch stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ touch stu.txt
+
+//Open the file "stu.txt" using the "vi" text editor
+vi stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ vi stu.txt
+
+// Displays the contents of stu.txt
+more stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ more stu.txt
+dd      12      26      56
+bb      56      87      89
+cc      78      98      77
+dd      89      26      75
+ee      75      52      66
+
+// List all the .txt files
+dir *.txt
+[samo@DESKTOP-9M2HMHV ~]$ dir *.txt
+new.txt  stu.txt
+
+// Find files or directories matching *c*
+[samo@DESKTOP-9M2HMHV ~]$ find *c*
+abc.tsv
+rows_test1.csv
+test.csv
+test1.csv
+test3.csv
+
+// Sets read-only permissions for everyone
+chmod 444 stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ chmod 444 stu.txt
+
+// List files and directories in the current directory
+[samo@DESKTOP-9M2HMHV ~]$ ls
+abc.tsv      new.txt         stu.txt   test1.csv
+awkvars.out  rows_test1.csv  test.csv  test3.csv
+
+// Displays detailed information about files and directories
+[samo@DESKTOP-9M2HMHV ~]$ ls -l
+total 28
+-rw-r--r-- 1 samo samo 144 Mar 23 16:35 abc.tsv
+-rw-r--r-- 1 samo samo 431 Mar 22 16:36 awkvars.out
+-rwxr--r-- 1 samo samo  60 Mar 22 18:24 new.txt
+-rw-r--r-- 1 samo samo  38 Mar 23 18:02 rows_test1.csv
+-r--r--r-- 1 samo samo  60 Mar 23 18:43 stu.txt
+-rw-r--r-- 1 samo samo  64 Mar 23 17:39 test.csv
+-rw-r--r-- 1 samo samo   0 Mar 22 18:18 test1.csv
+-rw-r--r-- 1 samo samo  35 Mar 23 17:58 test3.csv
+
+// Grants full permissions (read, write, execute) to everyone
+chmod 777 stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ chmod 777 stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ ls -l
+total 28
+-rw-r--r-- 1 samo samo 144 Mar 23 16:35 abc.tsv
+-rw-r--r-- 1 samo samo 431 Mar 22 16:36 awkvars.out
+-rwxr--r-- 1 samo samo  60 Mar 22 18:24 new.txt
+-rw-r--r-- 1 samo samo  38 Mar 23 18:02 rows_test1.csv
+-rwxrwxrwx 1 samo samo  60 Mar 23 18:43 stu.txt
+-rw-r--r-- 1 samo samo  64 Mar 23 17:39 test.csv
+-rw-r--r-- 1 samo samo   0 Mar 22 18:18 test1.csv
+-rw-r--r-- 1 samo samo  35 Mar 23 17:58 test3.csv
+
+chmod 547 stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ chmod 547 stu.txt
+[samo@DESKTOP-9M2HMHV ~]$ ls -l
+total 28
+-rw-r--r-- 1 samo samo 144 Mar 23 16:35 abc.tsv
+-rw-r--r-- 1 samo samo 431 Mar 22 16:36 awkvars.out
+-rwxr--r-- 1 samo samo  60 Mar 22 18:24 new.txt
+-rw-r--r-- 1 samo samo  38 Mar 23 18:02 rows_test1.csv
+-r-xr--rwx 1 samo samo  60 Mar 23 18:43 stu.txt
+-rw-r--r-- 1 samo samo  64 Mar 23 17:39 test.csv
+-rw-r--r-- 1 samo samo   0 Mar 22 18:18 test1.csv
+-rw-r--r-- 1 samo samo  35 Mar 23 17:58 test3.csv
