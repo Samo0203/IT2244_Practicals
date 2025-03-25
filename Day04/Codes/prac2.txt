@@ -1,0 +1,24 @@
+// Opens the vi text editor of prgrm1.sh
+[samo@DESKTOP-9M2HMHV ~]$ vi prgrm1.sh
+
+// Lists the files in the current directory
+[samo@DESKTOP-9M2HMHV ~]$ ls
+abc.tsv      new.txt    rows_test1.csv  test.csv   test3.csv
+awkvars.out  prgrm1.sh  stu.txt         test1.csv
+
+// Changes the permissions of prgrm1.sh to allow read, write, and execute access for everyone
+[samo@DESKTOP-9M2HMHV ~]$ chmod 777 prgrm1.sh
+
+// Executes the shell script prgrm1.sh
+[samo@DESKTOP-9M2HMHV ~]$ ./prgrm1.sh
+Who are you?
+Samodya
+Enter number 1
+5
+Enter number 2
+2
+Enter number 3
+10
+Hi Samodya
+Summation        17
+Average  5

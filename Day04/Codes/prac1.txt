@@ -1,0 +1,98 @@
+// Display the calendar for the current month (March 2025).
+ The days are arranged in a grid format
+[samo@DESKTOP-9M2HMHV ~]$ cal
+     March 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+// Print the working directory 
+[samo@DESKTOP-9M2HMHV ~]$ pwd
+/home/samo
+
+// List the files in the current directory,
+ showing only regular files and directories.
+[samo@DESKTOP-9M2HMHV ~]$ ls
+abc.tsv      new.txt         stu.txt   test1.csv
+awkvars.out  rows_test1.csv  test.csv  test3.csv
+
+// Lists all files, including hidden files 
+[samo@DESKTOP-9M2HMHV ~]$ ls -a
+.   .bash_history  .bash_profile  abc.tsv      new.txt         stu.txt   test1.csv
+..  .bash_logout   .bashrc        awkvars.out  rows_test1.csv  test.csv  test3.csv
+
+// List files in long format with permissions
+[samo@DESKTOP-9M2HMHV ~]$ ls -lgr
+total 28
+-rw-r--r-- 1 samo  35 Mar 23 17:58 test3.csv
+-rw-r--r-- 1 samo   0 Mar 22 18:18 test1.csv
+-rw-r--r-- 1 samo  64 Mar 23 17:39 test.csv
+-r-xr--rwx 1 samo  60 Mar 23 20:33 stu.txt
+-rw-r--r-- 1 samo  38 Mar 23 18:02 rows_test1.csv
+-rwxr--r-- 1 samo  60 Mar 22 18:24 new.txt
+-rw-r--r-- 1 samo 431 Mar 22 16:36 awkvars.out
+-rw-r--r-- 1 samo 144 Mar 23 16:35 abc.tsv
+
+// Print the current day of the month
+[samo@DESKTOP-9M2HMHV ~]$ date +%d
+25
+
+// Print the last two digits of the current year
+[samo@DESKTOP-9M2HMHV ~]$ date +%y
+25
+
+// Print the full current year
+[samo@DESKTOP-9M2HMHV ~]$  date +%Y
+2025
+
+// Print the full month name
+[samo@DESKTOP-9M2HMHV ~]$  date +%B
+March
+
+// Print the numeric representation of the month 
+[samo@DESKTOP-9M2HMHV ~]$ date +%m
+03
+
+// Print the abbreviated weekday name
+[samo@DESKTOP-9M2HMHV ~]$ date +%a
+Tue
+
+// Print the full weekday name
+[samo@DESKTOP-9M2HMHV ~]$ date +%A
+Tuesday
+
+// Print the current hour in 24-hour format 
+[samo@DESKTOP-9M2HMHV ~]$ date +%H
+18
+
+// Print the current minute
+[samo@DESKTOP-9M2HMHV ~]$ date +%M
+51
+
+// Print the number of seconds since January 1, 1970 
+[samo@DESKTOP-9M2HMHV ~]$ date +%s
+1742908893
+
+// Print the current time in HH:MM:SS format
+[samo@DESKTOP-9M2HMHV ~]$ date +%X
+18:52:03
+
+// Print the current time in HH:MM format
+[samo@DESKTOP-9M2HMHV ~]$ date +%R
+18:52
+
+// Print the current date in MM/DD/YY format
+[samo@DESKTOP-9M2HMHV ~]$ date +%x
+03/25/25
+
+// Print whether the time is AM or PM
+[samo@DESKTOP-9M2HMHV ~]$ date +%p
+PM
+
+// Prints the full date and time with time zone
+[samo@DESKTOP-9M2HMHV ~]$ date
+Tue Mar 25 18:54:46 +0530 2025

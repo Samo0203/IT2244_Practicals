@@ -1,0 +1,24 @@
+// read two number from user and print 
+// addition, subtraction, multiplication and division.
+
+// Opens the vi text editor of program.sh
+[samo@DESKTOP-9M2HMHV ~]$ vi program.sh
+
+// Changes the permissions to allow read, write, and execute access for everyone
+[samo@DESKTOP-9M2HMHV ~]$ chmod 777 program.sh
+
+// Lists the files in the current directory
+[samo@DESKTOP-9M2HMHV ~]$ ls
+abc.tsv      new.txt    program.sh      stu.txt   test1.csv
+awkvars.out  prgrm1.sh  rows_test1.csv  test.csv  test3.csv
+
+// Executes the program.sh
+[samo@DESKTOP-9M2HMHV ~]$ ./program.sh
+Enter number 1
+6
+Enter number 2
+3
+Summation        9
+Subtraction  3
+Multiplication  18
+Division  2
