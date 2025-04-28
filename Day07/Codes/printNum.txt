@@ -1,0 +1,23 @@
+Q3).Print the integers from 1 to 10 using while loop
+
+code:-
+	let i=1
+	while [ $i -le 10 ]
+	do
+	echo $i
+	i=$(($i+1))
+	done
+
+output:-
+	[2021ict119@fedora ~]$ vi printNum.sh
+	[2021ict119@fedora ~]$ ./printNum.sh
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+	10
