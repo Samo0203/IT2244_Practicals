@@ -13,4 +13,5 @@ Verify whether your user name is correct or not.(use your name as in your input)
 Enter two numbers and find the max
 ![1 5](https://github.com/user-attachments/assets/3b9eba98-fbad-4db9-9bc0-5de74fb202eb)
 
-
+Create simple calculator using "expr" command
+![1 6](https://github.com/user-attachments/assets/1a192d05-28b0-44f3-abbb-7220f87d0fb8)
