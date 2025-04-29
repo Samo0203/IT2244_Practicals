@@ -7,3 +7,5 @@ echo Username: %username%
 echo Windows version: 
 ver
 :: Display the current Windows version
+
+pause
