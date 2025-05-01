@@ -3,15 +3,20 @@ Q2)Factorial
 
 code:-
 
-// Initialize fact to 1
-fact=1
+echo "Enter the number for factorial: "
+read num
 
-// Loop from i=1 to i<=5
-for((i=1; i<=5; i++))
+// Initialize fact to 1
+let fact=1
+
+// Loop from i=1 to num
+for((a=1;a<=$num;a++))
 do
-    // Multiply current fact with i and store it back in fact
-    fact=$(($fact * $i))
+ fact=$(($fact*$a))
 done
+ // Multiply current fact with i and store it back in fact
+echo "Factorial of $num is: $fact "
+
 
 // Output the result
 echo "Factorial of 5 is: "$fact
