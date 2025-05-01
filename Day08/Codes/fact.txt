@@ -12,14 +12,13 @@ let fact=1
 // Loop from i=1 to num
 for((a=1;a<=$num;a++))
 do
+ // Multiply current fact with i and store it back in fact
  fact=$(($fact*$a))
 done
- // Multiply current fact with i and store it back in fact
-echo "Factorial of $num is: $fact "
-
 
 // Output the result
-echo "Factorial of 5 is: "$fact
+echo "Factorial of $num is: $fact "
+
 
 output:-
 
