@@ -1,0 +1,567 @@
+############ if else
+
+syntax:-
+	if(condition){
+		//body of if statement;
+	}
+	else{
+		//body of else statement;
+	}
+
+Example:-
+	Enter your age and verify your eligible or not for election voting
+	using if else condition.
+
+code:-
+	#include<stdio.h>
+
+	int main(){
+	int age;
+	printf("Enter your age: ");
+	scanf("%d",&age);
+
+	if(age < 0){
+		printf("Invalid age\n");
+	}
+	else if(age > 18){
+		printf("You are eligible for voting\n");
+	}
+	else{
+		printf("You are not eligible\n");
+	}
+
+	return 0;
+	}
+
+output:-
+	[2021ict119@fedora ~]$ vi ifElse.c
+	[2021ict119@fedora ~]$ gcc ifElse.c -o ifElse
+	[2021ict119@fedora ~]$ ./ifElse
+	Enter your age: 22
+	You are eligible for voting
+	[2021ict119@fedora ~]$ ./ifElse
+	Enter your age: 15
+	You are not eligible
+	
+	
+############ Ternary Operator
+
+syntax:-
+	test_condition ? expression1 :expression2;
+	
+code:-
+	#include<stdio.h>
+
+	int main(){
+	int age;
+	printf("Enter your age: ");
+	scanf("%d",&age);
+
+	(age >= 18) ? printf("Eligible\n") :printf("Not Eligible\n");
+
+	return 0;
+	}
+
+output:-
+	[2021ict119@fedora ~]$ vi Ternaty.c
+	[2021ict119@fedora ~]$ gcc Ternaty.c -o Ternaty
+	[2021ict119@fedora ~]$ ./Ternaty
+	Enter your age: 25
+	Eligible
+	[2021ict119@fedora ~]$ ./Ternaty
+	Enter your age: 12
+	Not Eligible
+	
+############ Switch Operation
+
+syntax:-
+	switch(variable/expression){
+		case 1:
+		  //body of case 1
+		  break;
+		case 2:
+		  //body of case 2
+		  break;
+		
+		case n:
+		  //body of case n
+		  break;
+		  
+		default:
+		  //body of default
+	}
+	
+	
+//1
+Enter the value between 1 to 7 and create a program for display day
+	
+code:-
+	#include<stdio.h>
+
+	int main(){
+	int num;
+	printf("Enter the number between 1 to 7 : ");
+	scanf("%d",&num);
+	
+	switch(num){
+		case 1:
+		  printf("Today is Sunday\n");
+		  break;
+		case 2:
+		  printf("Today is Monday\n");
+		  break;
+		case 3:
+		  printf("Today is Tuesday\n");
+		  break;
+		case 4:
+		  printf("Today is Wednesday\n");
+		  break;
+		case 5:
+		  printf("Today is Thursday\n");
+		  break;
+		case 6:
+		  printf("Today is Friday\n");
+		  break;
+		case 7:
+		  printf("Today is Saturday\n");
+		  break;  
+		default:
+		  printf("Invalid\n");
+	}
+	
+	return 0;
+	}
+	
+output:-
+	[2021ict119@fedora ~]$ vi switch.c
+	[2021ict119@fedora ~]$ gcc switch.c -o switch
+	[2021ict119@fedora ~]$ ./switch
+	Enter the number between 1 to 7 : 5
+	Today is Thursday
+	[2021ict119@fedora ~]$ ./switch
+	Enter the number between 1 to 7 : 8
+	Invalid
+	
+	
+//2
+Write a code for small astrology based on your life path number for that get date of birth from user 
+then calculate life path number
+	
+	Date:23
+	
+	calculation for life path number:
+				a = date%10
+				b = date%10
+				c = a + b
+	If life path number:
+				1 : Lucky
+				2 : Carefully do your work
+				3 : Stronger
+				4 : Happy
+				5 : Can get help
+				6 : Doubt
+				7 : Sad
+				8 : Like
+				9 : Courage
+
+code:-
+#include<stdio.h>
+
+	int main(){
+	int date;
+	printf("Enter your birth date : ");
+	scanf("%d",&date);
+	
+	int a, b, c, d, e, f;
+	
+	a = date % 10;
+	b = date / 10;
+	c = a + b;
+	
+	d= c % 10;
+	e= c / 10;
+	f= d + e;
+	
+	switch(f){
+		case 1:
+		  printf("Lucky\n");
+		  break;
+		case 2:
+		  printf("Carefully do your work\n");
+		  break;
+		case 3:
+		  printf("Stronger\n");
+		  break;
+		case 4:
+		  printf("Happy\n");
+		  break;
+		case 5:
+		  printf("Can get help\n");
+		  break;
+		case 6:
+		  printf("Doubt\n");
+		  break;
+		case 7:
+		  printf("Sad\n");
+		  break;  
+		case 8:
+		  printf("Like\n");
+		  break;
+		case 9:
+		  printf("Courage\n");
+		  break;
+		default:
+		  printf("Invalid\n");
+	}
+	
+	return 0;
+	}
+
+output:-
+	[2021ict119@fedora ~]$ ./lifePath
+	Enter your birth date : 25
+	Sad
+	[2021ict119@fedora ~]$ ./lifePath
+	Enter your birth date : 30
+	Stronger
+	[2021ict119@fedora ~]$ ./lifePath
+	Enter your birth date : 29
+	Carefully do your work
+
+
+//3
+Give list of numbers then calculate the summation and multiplication using for loop
+ex:-
+	1 2 3 4 5
+	summation = 15
+	multiplication = 120
+	
+code:-
+	#include <stdio.h>
+
+	int main() {
+    int n, i;
+    int sum = 0, product = 1;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter %d numbers: \n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        sum += numbers[i];        
+        product *= numbers[i]; 
+    }
+
+    printf("Summation = %d\n", sum);
+    printf("Multiplication = %d\n", product);
+
+    return 0;
+	}
+
+
+output:-
+	[2021ict119@fedora ~]$ gcc forLoop.c -o forLoop
+	[2021ict119@fedora ~]$ ./forLoop
+	Enter the number of elements: 5
+	Enter 5 numbers:
+	1
+	2
+	3
+	4
+	5
+	Summation = 15
+	Multiplication = 120
+
+
+//4
+Print the integers from 1 to 10 using while loop
+
+code:-
+	#include <stdio.h>
+
+	int main() {
+    int i = 1;
+
+    while (i <= 10) {
+        printf("%d ", i);  
+        i++;
+    }
+    printf("\n"); 
+    return 0;
+}
+
+output:-
+	[2021ict119@fedora ~]$ vi while.c
+	[2021ict119@fedora ~]$ gcc while.c -o while
+	[2021ict119@fedora ~]$ ./while
+	1 2 3 4 5 6 7 8 9 10
+
+
+//5
+Write a C program to generate and print the Fibbonacci series up to a specified number of terms. The 
+program should take the number of terms as input from user and then display the corresponding Fibonacci 
+sequence
+
+code:-
+	#include <stdio.h>
+
+	int main() {
+		int n, first = 0, second = 1, next;
+
+		printf("Enter the number of terms: ");
+		scanf("%d", &n);
+
+		if (n <= 0) {
+			printf("Please enter a positive integer.\n");
+			return 1;
+		}
+
+		printf("Fibonacci Series up to %d terms: \n", n);
+
+		if (n >= 1) {
+			printf("%d ", first);
+		}
+
+		if (n >= 2) {
+			printf("%d ", second);
+		}
+
+		for (int i = 3; i <= n; i++) {
+			next = first + second;
+			printf("%d ", next);
+			first = second;
+			second = next;
+		}
+
+		printf("\n");
+		return 0;
+	}
+
+output:-
+	[2021ict119@fedora ~]$ vi fibbo.c
+	[2021ict119@fedora ~]$ gcc fibbo.c  -o fibbo
+	[2021ict119@fedora ~]$ ./fibbo
+	Enter the number of terms: 10
+	Fibonacci Series up to 10 terms:
+	0 1 1 2 3 5 8 13 21 34
+	
+
+//6
+Write a C program to calculate the factorial of given non negative integer.
+code :-
+	#include <stdio.h>
+
+	int main() {
+		int n, fact = 1;
+
+		printf("Enter a non-negative integer: ");
+		scanf("%d", &n);
+
+		if (n < 0) {
+			printf("Factorial is not defined for negative integers.\n");
+		} else {
+			
+			for (int i = 1; i <= n; ++i) {
+				fact *= i;  
+			}
+			
+			printf("Factorial of %d is %d\n", n, fact);
+		}
+
+		return 0;
+	}
+	
+output:-
+	[2021ict119@fedora ~]$ vi fact.c
+	[2021ict119@fedora ~]$ gcc fact.c -o fact
+	[2021ict119@fedora ~]$ ./fact
+	Enter a non-negative integer: 6
+	Factorial of 6 is 720
+	[2021ict119@fedora ~]$ ./fact
+	Enter a non-negative integer: -2
+	Factorial is not defined for negative integers.
+
+
+//7
+Write a C program that:
+Accepts two strings as input from user.  Concatenates the two strings Displays the concatenated result.
+
+code:-
+	#include <stdio.h>
+	#include <string.h>
+
+	int main() {
+    char str1[100], str2[100];
+
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+
+    strcat(str1, str2);
+
+    printf("Concatenated result: %s\n", str1);
+
+    return 0;
+	}
+
+output:-
+	[2021ict119@fedora ~]$ vi concat.c
+	[2021ict119@fedora ~]$ gcc concat.c -o concat
+	[2021ict119@fedora ~]$ ./concat
+	Enter the first string: Apple
+	Enter the second string: Cake
+	Concatenated result: AppleCake
+
+//8
+Write a C program that takes a binary number (as an integer) as input and convets its decimal equivalent
+
+code:-
+	#include <stdio.h>
+	#include <math.h>
+
+	int main() {
+    	long long binary;
+    	int decimal = 0, base = 1, remainder;
+
+    	printf("Enter a binary number : ");
+    	scanf("%lld", &binary);
+
+    	while (binary != 0) {
+        	remainder = binary % 10;
+        	if (remainder != 0 && remainder != 1) {
+            	printf("Invalid binary number.\n");
+            	return 1;
+        }
+        decimal += remainder * base;
+        binary /= 10;
+        base *= 2;
+   	}
+
+    	printf("Decimal equivalent: %d\n", decimal);
+
+    	return 0;
+	}
+
+output:-
+	[samo@DESKTOP-9M2HMHV ~]$ gcc binary.c -o binary
+	[samo@DESKTOP-9M2HMHV ~]$ ./binary
+	Enter a binary number : 1010
+	Decimal equivalent: 10
+
+
+//9
+Write a C program that:
+Accept an array of integers from the user
+Find and displays the maximum and minimum values in the array
+
+code:-
+	#include <stdio.h>
+
+	int main() {
+		int n, i;
+		int arr[100];
+		int max, min;
+
+		printf("Enter the number of elements in the array: ");
+		scanf("%d", &n);
+
+		if (n <= 0 || n > 100) {
+			printf("Invalid number of elements.\n");
+			return 1;
+		}
+
+		printf("Enter %d integers:\n", n);
+		for (i = 0; i < n; i++) {
+			scanf("%d", &arr[i]);
+		}
+
+		max = min = arr[0];
+
+		for (i = 1; i < n; i++) {
+			if (arr[i] > max)
+				max = arr[i];
+			if (arr[i] < min)
+				min = arr[i];
+		}
+
+		printf("Maximum value: %d\n", max);
+		printf("Minimum value: %d\n", min);
+
+		return 0;
+	}
+
+output:-
+	[samo@DESKTOP-9M2HMHV ~]$ vi array.c
+	[samo@DESKTOP-9M2HMHV ~]$ gcc array.c -o array
+	[samo@DESKTOP-9M2HMHV ~]$ ./array
+	Enter the number of elements in the array: 5
+	Enter 5 integers:
+	12 5 75 82 34
+	Maximum value: 82
+	Minimum value: 5
+
+//10
+C program to generate Pascal's Triangle
+	sample output:-
+		
+no of rows =5
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+  
+ code:-
+	#include <stdio.h>
+
+	int factorial(int n) {
+		if (n == 0 || n == 1)
+			return 1;
+		return n * factorial(n - 1);
+	}
+
+
+	int combination(int n, int r) {
+		return factorial(n) / (factorial(r) * factorial(n - r));
+	}
+
+	int main() {
+		int rows, i, j, space;
+
+		printf("Enter the number of rows: ");
+		scanf("%d", &rows);
+
+		for (i = 0; i < rows; i++) {
+			
+			for (space = 0; space < rows - i - 1; space++) {
+				printf("  ");
+			}
+
+			for (j = 0; j <= i; j++) {
+				printf("%4d", combination(i, j)); 
+			}
+
+			printf("\n");
+		}
+
+		return 0;
+	}
+
+output:-
+	[samo@DESKTOP-9M2HMHV ~]$ vi pascal.c
+	[samo@DESKTOP-9M2HMHV ~]$ gcc pascal.c -o pascal
+	[samo@DESKTOP-9M2HMHV ~]$ ./pascal
+	Enter the number of rows: 5
+			   1
+			 1   1
+		   1   2   1
+		 1   3   3   1
+	   1   4   6   4   1
