@@ -1,0 +1,45 @@
+//Exercise 02
+//First child: Sleeps for 2 seconds, exits with status 2.
+//Second child: Sleeps for 1 second, exits with status 1
+//Parent: waits twice, and prints which child (by PID or exit code) finished first and second
+
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t child1, child2;
+    int status1, status2;
+
+    child1 = fork();
+    if (child1 == 0) {
+        // First child process
+        printf("Child 1 process started\n");
+		printf("Sleeping for 2 seconds...\n");
+        sleep(2);
+        printf("Child 1 exiting with status 2\n");
+        exit(2);
+    }
+
+    child2 = fork();
+    if (child2 == 0) {
+        // Second child process
+        printf("Child 2 process started\n");
+		printf("Sleeping for 1 second...\n");
+        sleep(1);
+        printf("Child 2 exiting with status 1\n");
+        exit(1);
+    }
+
+    // Parent process waits for both children
+    pid_t finishedChild1 = wait(&status1);
+    pid_t finishedChild2 = wait(&status2);
+
+    printf("Parent: First child to finish had PID %d and exit status %d\n", finishedChild1, WEXITSTATUS(status1));
+    printf("Parent: Second child to finish had PID %d and exit status %d\n", finishedChild2, WEXITSTATUS(status2));
+
+    printf("Parent process ending.\n");
+    return 0;
+}
