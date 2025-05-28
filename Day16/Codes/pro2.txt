@@ -1,0 +1,31 @@
+// print numbers from 1 to 10 and 
+// 1 to 5 should be print by child process and 
+// from 6 to 10 should be parent process
+// calculate summation of those numbers
+
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+	
+	int sum1, sum2 = 0;
+	int f=fork();
+	
+	if(f==0){
+	for (int i = 1; i <= 5; i++) {
+		printf("%d\n",i);
+        sum1 += i;        
+    }
+	printf("Summation of child process: %d\n",sum1);
+	}
+	
+	else{
+	for (int j = 6; j <= 10 ; j++) {
+		printf("%d\n",j);
+        sum2 += j;        
+    }
+	wait();
+	printf("Summation of parent process: %d\n",sum2);
+	}
+	
+return 0;
+}

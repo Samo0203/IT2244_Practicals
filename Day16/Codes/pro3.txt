@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+
+        int f=fork();
+        int n;
+        int sum=0;
+
+        if(f==0){
+                n=1;
+        }
+        else{
+                n=6;
+        }
+        for(int i=n;i<n+5;i++){
+                printf("%d",i);
+                sum += i;
+        }
+        printf("\n");
+        printf("Summation : %d\n",sum);
+
+        return 0;
+}
