@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<unistd.h>
+int main()
+{
+	fork();
+	fork();
+	printf("\nHello World\n");
+	
+return 0;
+}
+
+output:-
+[2021ict119@fedora ~]$ ./fork1
+
+Hello World
+
+Hello World
+
+
+Hello World
+Hello World
+
+	

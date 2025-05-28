@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+	printf("\nHello World");
+	int f=fork();  //copy the process
+	int p=getpid();
+	
+	printf("\n the pid is %d",p);
+	printf("\n the fork is %d\n",f);
+	
+return 0;
+}
